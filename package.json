@@ -7,7 +7,7 @@
     "index.js"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "repository": "keqingrong/win-release-id",
   "keywords": [
@@ -16,5 +16,8 @@
     "windows"
   ],
   "author": "Qingrong Ke <keqingrong1992@gmail.com> (https://keqingrong.github.io/)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.25.0"
+  }
 }

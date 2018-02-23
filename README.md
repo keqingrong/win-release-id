@@ -15,13 +15,16 @@ npm install win-release-id
 ```js
 const winReleaseId = require('win-release-id');
 
-// on Windows 10 v1709 Build 14393
+// on Windows 10 v1607 Build 14393
 winReleaseId();
-// => 1709
+// => 1607
 
 // before 10
 winReleaseId();
 // => -1
+
+winReleaseId('10.0.16299.214');
+// => 1709
 ```
 
 ## License

@@ -32,15 +32,19 @@ const getReleaseIdWithCmd = () => {
   }
 }
 
-const getWinReleaseId = () => {
+const getWinReleaseId = (release) => {
+  // Windows version form: `<major version>.<minor version>.<build number>.<revision>`
+  const osRelease = (release || os.release()).split('.');
+  const buildNumber = parseInt(osRelease[2], 10);
+  const releaseId = releaseInfo.get(buildNumber);
+  if (releaseId) {
+    return releaseId;
+  }
   if (process.platform !== 'win32') {
     return -1;
   }
-  // Windows version form: `<major version>.<minor version>.<build number>.<revision>`
-  const osRelease = os.release().split('.');
-  const buildNumber = parseInt(osRelease[2], 10);
   // Use getReleaseIdWithCmd for Windows 10 Insider Preview or the future version
-  return releaseInfo.get(buildNumber) || getReleaseIdWithCmd();
-};
+  return getReleaseIdWithCmd();
+}
 
 module.exports = getWinReleaseId;
