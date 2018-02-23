@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/win-release-id.svg)](https://www.npmjs.com/package/win-release-id)
 
-> Get the release id of the current Windows OS
+> Get the release id from the Windows release number: `10.0.16299.214` → `1709`
 
 ## Installation
 
