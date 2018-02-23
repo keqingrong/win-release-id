@@ -1,7 +1,7 @@
 {
   "name": "win-release-id",
   "version": "0.1.0",
-  "description": "Get the release id from the Windows release number: 10.0.16299.214 → 1709",
+  "description": "Get the release id of the current Windows OS",
   "main": "index.js",
   "files": [
     "index.js"
