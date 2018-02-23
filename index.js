@@ -5,6 +5,9 @@ const {
 
 // Reference: https://stackoverflow.com/questions/38935715/get-windows-10-build-version-release-id
 const getWinReleaseId = () => {
+  if (process.platform !== 'win32') {
+    return -1;
+  }
   const cmd = 'reg query "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion" /v "ReleaseId"';
   try {
     const output = execSync(cmd, {
