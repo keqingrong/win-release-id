@@ -10,8 +10,8 @@ const {
 // https://en.wikipedia.org/wiki/Windows_10
 // [buildNumber, releaseId]
 const releaseInfo = new Map([
-  [17604, 1809], // Redstone 5
-  [17101, 1803], // Redstone 4
+  [17639, 1809], // Redstone 5
+  [17133, 1803], // Redstone 4, Spring Creators Update
   [16299, 1709], // Redstone 3, Fall Creators Update
   [15063, 1703], // Redstone 2, Creators Update
   [14393, 1607], // Redstone 1, Anniversary Update
