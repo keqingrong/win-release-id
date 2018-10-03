@@ -19,7 +19,7 @@ const winReleaseId = require('win-release-id');
 winReleaseId();
 // => 1607
 
-// before 10
+// before 10 (Windows 7/8/8.1 etc.)
 winReleaseId();
 // => -1
 
