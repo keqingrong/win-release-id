@@ -1,6 +1,10 @@
 import test from 'ava';
 import winReleaseId from '.';
 
+test('Windows 7', t => {
+  t.deepEqual(winReleaseId('6.1.7601'), -1);
+});
+
 test('Windows 10 Version 1709', t => {
   t.deepEqual(winReleaseId('10.0.16299.214'), 1709);
 });

@@ -5,8 +5,7 @@ const {
 } = require('child_process');
 
 // Reference:
-// https://technet.microsoft.com/en-us/windows/release-info.aspx
-// http://windows.microsoft.com/en-us/windows-10/update-history-windows-10
+// https://docs.microsoft.com/en-us/windows/release-information/
 // https://en.wikipedia.org/wiki/Windows_10
 // [buildNumber, releaseId]
 const releaseInfo = new Map([
@@ -40,6 +39,16 @@ const getWinReleaseId = (release) => {
   const releaseId = releaseInfo.get(buildNumber);
   if (releaseId) {
     return releaseId;
+  }
+  if (release) {
+    const majorVersion = parseInt(osRelease[0], 10);
+    // before Windows 10
+    if (majorVersion < 10) {
+      return -1;
+    }
+    // future Windows
+    // TODO: To be updated...
+    return -1;
   }
   if (process.platform !== 'win32') {
     return -1;

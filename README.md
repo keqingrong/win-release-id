@@ -25,6 +25,9 @@ winReleaseId();
 
 winReleaseId('10.0.16299.214');
 // => 1709
+
+winReleaseId('6.1.7601');
+// => -1
 ```
 
 ## License
