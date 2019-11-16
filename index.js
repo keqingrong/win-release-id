@@ -9,6 +9,7 @@ const {
 // https://en.wikipedia.org/wiki/Windows_10
 // [buildNumber, releaseId]
 const releaseInfo = new Map([
+  [19018, 2003], // 20H1, May 2020 Update
   [18363, 1909], // 19H2, November 2019 Update
   [18362, 1903], // 19H1, May 2019 Update
   [17763, 1809], // Redstone 5, October 2018 Update
